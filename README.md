@@ -14,24 +14,18 @@ and the LM502 module that contains a 32-Bit RISC MCU CY8C4147AXI-S445 https://ww
 
 The official toolchain for the cypress MCU is PSOC creator.
 
-I was hoping that it would be possible to use the generated sources in platfotm io, 
+I was hoping that it would be possible to use the generated sources with platfotm io, 
 https://platformio.org/
-However, this might not be so easy without adding custom startup files
-We do not want the stm32 low_level init files to run at startup
-
-https://github.com/platformio/platformio-core/commit/1e21d6e05bbbeb0cc682eca9b0f1bc5e5e180b5f
-
-~/.platformio/platforms/ststm32/builder/frameworks/cmsis.py
+However, this might not be so easy without adding custom startup files as we do not want the stm32 low_level init functions to run at startup.
 
 
 # Cypress MCU
 
-The official toolchain for the cypress MCU is PSOC creator.
+The official IDE for the cypress MCU is PSOC creator.
 https://www.cypress.com/documentation/other-resources/psoc-creator-user-guide
 The PSOC creator uses a modified version of cmsis  5.0  https://developer.arm.com/tools-and-software/embedded/cmsis
 
-copy the *.c and *.h files in the Generated directory as well as the cyapicallbacks.h file to src directory
-copy the file CyBootAsmGnu.s to the boot directory
+copy the *.c and *.h files in the Generated directory as well as the cyapicallbacks.h file to src directory. Also add main.c
 
 
 # Debugging
@@ -56,3 +50,6 @@ https://www.embedded.com/design/mcus-processors-and-socs/4026075/Building-Bare-M
 
 
 
+https://github.com/platformio/platformio-core/commit/1e21d6e05bbbeb0cc682eca9b0f1bc5e5e180b5f
+
+~/.platformio/platforms/ststm32/builder/frameworks/cmsis.py
