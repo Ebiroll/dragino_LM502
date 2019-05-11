@@ -40,7 +40,7 @@ https://github.com/devanlai/dap42 , make sure you use the correct pins to connec
 
 
 ST Pin Name | Module pim  
------| ------ | ----- 
+-----| ------ 
 PA_4	| SWD_CLK 
 PA_2	| SWD_DATA 
 PA_9	| RX1 
