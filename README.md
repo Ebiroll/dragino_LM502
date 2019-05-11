@@ -14,9 +14,10 @@ and the LM502 module that contains a 32-Bit RISC MCU CY8C4147AXI-S445 https://ww
 
 The official toolchain for the cypress MCU is PSOC creator.
 
-I was hoping that it would be possible to use platfotm io, 
+I was hoping that it would be possible to use the generated sources in platfotm io, 
 https://platformio.org/
 However, this might not be so easy without adding custom startup files
+We do not want the stm32 low_level init files to run at startup
 
 https://github.com/platformio/platformio-core/commit/1e21d6e05bbbeb0cc682eca9b0f1bc5e5e180b5f
 
@@ -35,8 +36,7 @@ copy the file CyBootAsmGnu.s to the boot directory
 
 # Debugging
 
-The ST32F103 comes preflashed with cmsis-dap firmware but if you want to build your own, try this
-https://github.com/devanlai/dap42 , make sure you use the correct pins to connect to the LM502 SWD pins.
+The ST32F103 comes preflashed with cmsis-dap firmware but if you want to build your own, you could try this https://github.com/devanlai/dap42 , make sure you use the correct pins to connect to the LM502 SWD pins.
 
 
 ST Pin Name | Module pim  
@@ -47,12 +47,12 @@ PA_9	| RX1
 PA_10	| TX1
 
 
-
-
 https://docs.platformio.org/en/latest/plus/debug-tools/cmsis-dap.html
 
 
+# Info
 
+https://www.embedded.com/design/mcus-processors-and-socs/4026075/Building-Bare-Metal-ARM-Systems-with-GNU-Part-2
 
 
 
