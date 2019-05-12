@@ -44,6 +44,22 @@ PA_10	| TX1
 https://docs.platformio.org/en/latest/plus/debug-tools/cmsis-dap.html
 
 
+# Running in qemu
+
+It seems like the linker scripts sets the correct reset handler,
+This means that we probably can use our platform-io build as it is.
+
+    emu-system-arm -nographic  -d unimp   -cpu cortex-m0 -machine cubieboard -kernel .pioenvs/demo_lm502/firmware.elf  -S -s
+
+    arm-none-eabi-gdb  .pioenvs/demo_lm502/firmware.elf
+    (gdb) target remote:1234
+    (gdb) where
+    #0  Reset () at src/Cm0plusStart.c:378
+    
+    (gdb) b    cyfitter_cfg();
+    (gdb) b ClockSetup
+    
+
 # Info
 
 https://www.embedded.com/design/mcus-processors-and-socs/4026075/Building-Bare-Metal-ARM-Systems-with-GNU-Part-2
