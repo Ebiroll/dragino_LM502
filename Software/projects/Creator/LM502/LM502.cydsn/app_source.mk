@@ -1,0 +1,67 @@
+#This abstracts the application source files selected by the user.
+
+APP_C_SOURCE_CortexM0p=\
+	../../../../platform/arch/arm/armv6m/gcc/m0/port_c.c\
+	../../../../platform/mcu/cy8c4147/aos/soc_impl.c\
+	../../../../platform/mcu/cy8c4147/runapp/aos_smallsize.c\
+	../../../../kernel/modules/fs/kv/kvmgr.c\
+	../../../../kernel/vcall/aos/aos_rhino.c\
+	../../../../tools/cli/dumpsys.c\
+	../../../../tools/cli/cli.c\
+	../../../../platform/mcu/cy8c4147/hal/uart_port.c\
+	../../../../board/asr6501/board.c\
+	../../../../board/asr6501/src/asr_board.c\
+	../../../../board/asr6501/src/gpio.c\
+	../../../../board/asr6501/src/gpio-board.c\
+	../../../../board/asr6501/src/spi-board.c\
+	../../../../board/asr6501/src/gpio_irq.c\
+	../../../../kernel/rhino/core/k_mm_blk.c\
+	../../../../kernel/rhino/core/k_mm_debug.c\
+	../../../../kernel/rhino/core/k_mutex.c\
+	../../../../kernel/rhino/core/k_obj.c\
+	../../../../kernel/rhino/core/k_pend.c\
+	../../../../kernel/rhino/core/k_queue.c\
+	../../../../kernel/rhino/core/k_ringbuf.c\
+	../../../../kernel/rhino/core/k_sched.c\
+	../../../../kernel/rhino/core/k_sem.c\
+	../../../../kernel/rhino/core/k_stats.c\
+	../../../../kernel/rhino/core/k_sys.c\
+	../../../../kernel/rhino/core/k_task.c\
+	../../../../kernel/rhino/core/k_task_sem.c\
+	../../../../kernel/rhino/core/k_tick.c\
+	../../../../kernel/rhino/core/k_time.c\
+	../../../../kernel/rhino/core/k_timer.c\
+	../../../../kernel/rhino/core/k_workqueue.c\
+	../../../../kernel/rhino/core/k_buf_queue.c\
+	../../../../kernel/rhino/core/k_dyn_mem_proc.c\
+	../../../../kernel/rhino/core/k_err.c\
+	../../../../kernel/rhino/core/k_event.c\
+	../../../../kernel/rhino/core/k_idle.c\
+	../../../../kernel/rhino/core/k_mm.c\
+	../../../../kernel/rhino/common/k_fifo.c\
+	../../../../kernel/rhino/common/k_trace.c\
+	../../../../example/lorawan/loraRun/loraRun.c\
+	../../../../kernel/protocols/lorawan/linkwan/linkwan.c\
+	../../../../kernel/protocols/lorawan/linkwan/linkwan_ica_at.c\
+	../../../../kernel/protocols/lorawan/lora/mac/region/RegionEU868.c\
+	../../../../kernel/protocols/lorawan/lora/system/crypto/aes.c\
+	../../../../kernel/protocols/lorawan/lora/system/crypto/cmac.c\
+	../../../../kernel/protocols/lorawan/lora/mac/LoRaMacCrypto.c\
+	../../../../kernel/protocols/lorawan/lora/mac/region/Region.c\
+	../../../../kernel/protocols/lorawan/lora/mac/region/RegionCommon.c\
+	../../../../kernel/protocols/lorawan/lora/mac/LoRaMac.c\
+	../../../../kernel/protocols/lorawan/lora/mac/LoRaMacConfirmQueue.c\
+	../../../../kernel/protocols/lorawan/lora/system/delay.c\
+	../../../../kernel/protocols/lorawan/lora/system/low_power.c\
+	../../../../kernel/protocols/lorawan/lora/system/utilities.c\
+	../../../../device/lora/asr6501_lrwan/radio.c\
+	../../../../device/lora/sx126x/sx126x.c\
+	../../../../sensor/bsp/bsp.c\
+	../../../../sensor/ds18b20/ds18b20.c\
+	../../../../sensor/sht20/sht20.c
+
+APP_ASM_SOURCE_CortexM0p=\
+	../../../../platform/arch/arm/armv6m/gcc/m0/port_s.S
+
+APP_LIBS_CortexM0p=\
+
